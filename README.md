@@ -4,7 +4,7 @@
     <img width="450" src="https://github.com/adrienpetralia/ApplianceDetectionBenchmark/blob/master/ressources/Intro.png" alt="Intro image">
 </p>
 
-<h2 align="center">## Appliance Detection Using Very Low-Frequency Smart Meter Time Series (ACM e-Energy '23) </h2>
+<h2 align="center">Appliance Detection Using Very Low-Frequency Smart Meter Time Series (ACM e-Energy '23) </h2>
 
 ### Prerequisites 
 
