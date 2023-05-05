@@ -1,7 +1,7 @@
 <h1 align="center"> Appliance Detection Benchmark </h1>
 
 <p align="center">
-    <img width="400" src="https://github.com/adrienpetralia/ApplianceDetectionBenchmark/blob/master/ressources/Intro.png" alt="Intro image">
+    <img width="400" src="https://github.com/adrienpetralia/ApplianceDetectionBenchmark/blob/main/ressources/Intro.png" alt="Intro image">
 </p>
 
 <h2 align="center">Appliance Detection Using Very Low-Frequency Smart Meter Time Series (ACM e-Energy '23) </h2>
