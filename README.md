@@ -6,6 +6,12 @@
 
 <h2 align="center">Appliance Detection Using Very Low-Frequency Smart Meter Time Series (ACM e-Energy '23) </h2>
 
+<div align="center">
+<p>
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/adrienpetralia/ApplianceDetectionBenchmark">
+</p>
+</div>
+
 ### Abstract
 
 In recent years, smart meters have been widely adopted by electricity suppliers to improve the management of the smart grid system. 
