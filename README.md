@@ -8,7 +8,7 @@
 
 <div align="center">
 <p>
-<img alt="GitHub issues" src="https://img.shields.io/github/issues/adrienpetralia/ApplianceDetectionBenchmark">
+<img alt="GitHub" src="https://img.shields.io/github/license/adrienpetralia/ApplianceDetectionBenchmark"> <img alt="GitHub issues" src="https://img.shields.io/github/issues/adrienpetralia/ApplianceDetectionBenchmark">
 </p>
 </div>
 
