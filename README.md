@@ -59,11 +59,8 @@ The data used in this project comes multiple sources:
   <li>Private smart meter dataset provide by EDF (Electricité De France).</li>
 </ul> 
 
-To download the preprocessed subsample of the CER dataset (data/labels) :
+You may find more information on how to access the datasets in the [data](https://github.com/adrienpetralia/ApplianceDetectionBenchmark/tree/main/Data) folder.
 
-<code>cd data</code>
-
-Copy and paste the data from the link drive folder indicate in the README.md file.
 
 ### References:
 If you re-use this work, please cite:
