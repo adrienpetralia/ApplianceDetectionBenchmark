@@ -12,7 +12,7 @@ For this paper, we preprocessed the CER dataset. The preprocessed version of the
 
 - https://drive.google.com/drive/folders/1NyTiIE3hRr4pTY2iXR3RsuBjWKMFmhB8?usp=share_link
 
-It is important to note that the request to access CER data from the ISSDA (see the procedure above) have to be complete even though you are using the preprocessed dataset.
+It is important to note that the request to access CER data from the ISSDA (see the procedure above) have to be completed even though you are using the preprocessed dataset.
 
 ## Preprocesssing
 
