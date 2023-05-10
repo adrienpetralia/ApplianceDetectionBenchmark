@@ -25,6 +25,24 @@ The results indicate that the performance of current time series classifiers var
 Some of them, namely deep learning-based classifiers, provide promising results in terms of accuracy (especially for certain appliances), even using 30min sampled data, and are scalable to the large smart meter time series collections of energy consumption data currently available to electricity suppliers.
 Nevertheless, our study shows that more work is needed in this area to further improve the accuracy of the proposed solutions. 
 
+### References
+Adrien Petralia, Philippe Charpentier, Paul Boniol, and Themis Palpanas.
+2023. Appliance Detection Using Very Low-Frequency Smart Meter Time
+Series. In The 14th ACM International Conference on Future Energy Systems
+(e-Energy ’23), June 20–23, 2023, Orlando, FL, USA. ACM, New York, NY, USA,
+12 pages. https://doi.org/10.1145/3575813.3595198
+```
+@inproceedings{10.1145/3575813.3595198,
+  author    = {Adrien Petralia and
+               Philippe Charpentier and
+               Paul Boniol and
+               Themis Palpanas},
+  title     = {Appliance Detection Using Very Low-Frequency Smart Meter Time Series},
+  booktitle = {{ACM International Conference on Future Energy Systems (e-Energy)}},
+  year      = {2023}
+}
+```
+
 ### Contributors
 
 - Adrien Petralia (EDF R&D - Université Paris Cité)
