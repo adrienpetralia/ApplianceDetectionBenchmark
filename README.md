@@ -26,12 +26,11 @@ Some of them, namely deep learning-based classifiers, provide promising results 
 Nevertheless, our study shows that more work is needed in this area to further improve the accuracy of the proposed solutions. 
 
 ### References
-Adrien Petralia, Philippe Charpentier, Paul Boniol, and Themis Palpanas.
-2023. Appliance Detection Using Very Low-Frequency Smart Meter Time
-Series. In The 14th ACM International Conference on Future Energy Systems
-(e-Energy ’23), June 20–23, 2023, Orlando, FL, USA. ACM, New York, NY, USA,
-12 pages. https://doi.org/10.1145/3575813.3595198
-```
+> Adrien Petralia, Philippe Charpentier, Paul Boniol, and Themis Palpanas. 2023. 
+> Appliance Detection Using Very Low-Frequency Smart Meter Time Series. 
+> In The 14th ACM International Conference on Future Energy Systems (e-Energy ’23), June 20–23, 2023, Orlando, FL, USA. ACM, New York, NY, USA, 12 pages. https://doi.org/10.1145/3575813.3595198
+
+```bibtex
 @inproceedings{10.1145/3575813.3595198,
   author    = {Adrien Petralia and
                Philippe Charpentier and
