@@ -25,6 +25,11 @@ The results indicate that the performance of current time series classifiers var
 Some of them, namely deep learning-based classifiers, provide promising results in terms of accuracy (especially for certain appliances), even using 30min sampled data, and are scalable to the large smart meter time series collections of energy consumption data currently available to electricity suppliers.
 Nevertheless, our study shows that more work is needed in this area to further improve the accuracy of the proposed solutions. 
 
+### Contributors
+
+- Adrien Petralia (EDF R&D - Université Paris Cité)
+- Paul Boniol (Université Paris Cité - ENS Paris Saclay)
+
 ### Prerequisites 
 
 Python version : <code> >= Python 3.7 </code>
