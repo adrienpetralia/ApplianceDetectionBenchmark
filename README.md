@@ -82,7 +82,3 @@ The data used in this project comes multiple sources:
 </ul> 
 
 You may find more information on how to access the datasets in the [data](https://github.com/adrienpetralia/ApplianceDetectionBenchmark/tree/main/Data) folder.
-
-
-### References:
-If you re-use this work, please cite:
