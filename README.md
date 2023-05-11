@@ -81,4 +81,4 @@ The data used in this project comes multiple sources:
   <li>Private smart meter dataset provide by EDF (Electricité De France).</li>
 </ul> 
 
-You may find more information on how to access the datasets in the [data](https://github.com/adrienpetralia/ApplianceDetectionBenchmark/tree/main/Data) folder.
+You may find more information on how to access the datasets in the [data](https://github.com/adrienpetralia/ApplianceDetectionBenchmark/tree/main/data) folder.
