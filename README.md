@@ -118,10 +118,10 @@ and the imbalance degree of the test set for the case (IB Ratio). A slash indica
 
 ## Results
 
-In the following table, we summarize our benchmark evaluation for each appliance detection case. The classification methods used in our benchmark are listed in the following taxonomy:
+In the following table, we summarize our benchmark evaluation for each appliance detection case. The classification methods used in our benchmark are listed in the following taxonomy (only the methods in blue were experiumentally evaluated):
 
 <p align="center">
-    <img width="400" src="https://github.com/adrienpetralia/ApplianceDetectionBenchmark/blob/main/ressources/taxonomy.png" alt="Taxonomy of classification methods">
+    <img width="600" src="https://github.com/adrienpetralia/ApplianceDetectionBenchmark/blob/main/ressources/taxonomy.png" alt="Taxonomy of classification methods">
 </p>
 
 ### Desktop Computer Detection Accuracy (F1-Macro score) 
