@@ -84,3 +84,33 @@ The data used in this project comes multiple sources:
 </ul> 
 
 You may find more information on how to access the datasets in the [data](https://github.com/adrienpetralia/ApplianceDetectionBenchmark/tree/main/data) folder.
+
+The following table summarzies some statistics of the abovementioned datasets:
+
+| Datasets | number of TS | 1-min sampled  TS length | 10-min sampled  TS length | 15-min sampled  TS length | 30-min sampled  TS length |
+|----------|--------------|--------------------------|---------------------------|---------------------------|---------------------------|
+| REFIT    | 9091         | 1440                     | 144                       | 96                        | 48                        |
+| UKDALE   | 4767         | 1440                     | 144                       | 96                        | 48                        |
+| CER      | 4225         | /                        | /                         | /                         | 25728                     |
+| EDF 1    | 2611         | /                        | /                         | /                         | 17520                     |
+| EDF 2    | 1553         | /                        | 26208                     | 17427                     | 8736                      |
+
+
+The following table summarizes the selected appliance detection cases through the five datasets; for each case, the table summarizes the number of time series available (♯TS)
+and the imbalance degree of the test set for the case (IB Ratio). A slash indicate that no data are available for this case/dataset.
+
+| Appliance case    | REFIT (#TS, IB ratio) | UKDALE (#TS, IB ratio) | CER (#TS, IB ratio) | EDF 1 (#TS, IB ratio) | EDF 2 (#TS, IB ratio) |
+|-------------------|-----------------------|------------------------|---------------------|-----------------------|-----------------------|
+| Desktop Computer  | 5190 (0.56)           | /                      | 3286 (0.47)         | 1402 (0.38)           | 3740 (0.62)           |
+| Television        | 1134 (0.92)           | /                      | /                   | /                     | /                     |
+| Cooker            | /                     | /                      | 1682 (0.76)         | /                     | /                     |
+| Kettle            | 4790 (0.72)           | 1222 (0.84)            | /                   | /                     | /                     |
+| Microwave         | 7434 (0.55)           | 1678 (0.77)            | /                   | 342 (0.91)            | /                     |
+| Electric Oven     | /                     | /                      | /                   | 510 (0.85)            | 1152 (0.91)           |
+| Dishwasher        | 7798 (0.44)           | 2378 (0.32)            | 2350 (0.66)         | 224 (0.93)            | 2846 (0.75)           |
+| Tumble Dryer      | 3466 (0.22)           | /                      | 2214 (0.68)         | 1534 (0.41)           | 3470 (0.42)           |
+| Washing Machine   | 7422 (0.54)           | 2380 (0.38)            | /                   | /                     | /                     |
+| Water Heater      | /                     | /                      | 3070 (0.56)         | 1336 (0.66)           | 548 (0.86)            |
+| Electric Heater   | /                     | /                      | 1348 (0.19)         | 1624 (0.58)           | 1538 (0.56)           |
+| Convector         | /                     | /                      | /                   | 506 (0.69)            | /                     |
+| Electric Vehicule | /                     | /                      | /                   | 140 (0.3)             | /                     |
