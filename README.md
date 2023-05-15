@@ -71,7 +71,9 @@ Overall, the required python packages are listed as follows:
 
 Use pip to install all the required libraries listed in the requirements.txt file.
 
-<code> pip install -r requirements.txt </code>
+``` 
+pip install -r requirements.txt 
+```
 
 ## Data
 The data used in this project comes multiple sources:
