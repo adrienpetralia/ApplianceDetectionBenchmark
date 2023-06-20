@@ -104,7 +104,7 @@ def launch_one_case(chosen_clf, classifiers, list_case, path_data, path_res):
 
 if __name__ == "__main__":
     
-    path_data = os.getcwd()+'/Datasets/CER_Electricity/'
+    path_data = os.getcwd()+'/data/CER_Electricity/'
     path_res = None # Need to be fill
     
     chosen_classifier = str(sys.argv[1]) # Script argument

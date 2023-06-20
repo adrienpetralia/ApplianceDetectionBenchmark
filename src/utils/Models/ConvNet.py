@@ -1,7 +1,25 @@
 import torch
 import torch.nn as nn
 
-from Utils.Layers.ConvLayers import Conv1dSame
+class Conv1dSame(torch.nn.Module):
+    def __init__(self, in_channels, out_channels, kernel_size, dilation=1, bias=True,
+                 padding_layer=torch.nn.ReflectionPad1d):
+        super(Conv1dSame, self).__init__()
+        ka = kernel_size // 2
+        kb = ka - 1 if kernel_size % 2 == 0 else ka
+        
+        if dilation > 1:
+            ka = ka * dilation
+            kb = kb * dilation
+        
+        self.net = torch.nn.Sequential(padding_layer((ka,kb)),
+                                       torch.nn.Conv1d(in_channels, out_channels, kernel_size, 
+                                                       dilation=dilation, bias=bias)
+                                       )
+
+    def forward(self, x):
+        return self.net(x)
+
 
 class ConvNet(nn.Module):
     def __init__(self, in_channels=1, nb_class=2):
