@@ -89,7 +89,7 @@ def launch_one_case(chosen_clf, classifiers, list_case, path_data, path_res):
                     if not check_file_exist(path_inception+'Inception'+str(i)+'.pt'):
                         launch_deep_training(model, X_train, y_train, X_valid, y_valid, X_test, y_test, path_inception+'Inception'+str(i))
 
-                launch_classif(InceptionTime(Inception(), path_inception, 5), X_train, y_train, X_test, y_test, path_to_save)
+                launch_sktime_training(InceptionTime(Inception(), path_inception, 5), X_train, y_train, X_test, y_test, path_to_save)
             
             # ==================== Deep Learning Classifier =================== #
             elif chosen_clf=="ResNet" or chosen_clf=="ConvNet" or chosen_clf=="ResNetAtt":
@@ -97,7 +97,7 @@ def launch_one_case(chosen_clf, classifiers, list_case, path_data, path_res):
             
             # ==================== Sktime Classifier =================== #
             else:
-                launch_classif(model, X_train, y_train, X_test, y_test, path_to_save)
+                launch_sktime_training(model, X_train, y_train, X_test, y_test, path_to_save)
 
     return
   
