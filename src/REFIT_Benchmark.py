@@ -218,7 +218,7 @@ if __name__ == "__main__":
     # ====== Number of houses use with all the data available ====== #
     nb_houses = [4, 8, 12, 'all']
     for nb_h in nb_houses:
-        path_res_n_houses = create_dir(path_res + str(h) + '_houses' + os.sep)
+        path_res_n_houses = create_dir(path_res + str(nb_h) + '_houses' + os.sep)
         REFIT_case(str(sys.argv[1]), classifiers, [list_case[int(sys.argv[2])]], list_param, path_res_n_houses, nb_houses_used=nb_h)
         
      # ====== Percentage of data used by houses ====== #        
