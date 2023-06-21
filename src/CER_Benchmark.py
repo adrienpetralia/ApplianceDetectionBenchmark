@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import torch
 import torch.nn as nn
+from pathlib import Path
 
 from sklearn.model_selection import train_test_split
 
@@ -103,8 +104,9 @@ def launch_one_case(chosen_clf, classifiers, list_case, path_data, path_res):
   
 
 if __name__ == "__main__":
-    
-    path_data = os.getcwd()+'/data/CER_Electricity/'
+
+    root = Path(os.getcwd()).resolve().parents[0]
+    path_data = root + '/data/CER/'
     path_res = None # Need to be fill
     
     chosen_classifier = str(sys.argv[1]) # Script argument
