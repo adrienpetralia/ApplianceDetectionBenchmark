@@ -1,6 +1,7 @@
 numpy
+numba
 pandas
-sklearn
+scikit-learn
 imbalanced-learn
 torch==1.8.1
 torchinfo
