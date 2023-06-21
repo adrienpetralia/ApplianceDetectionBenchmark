@@ -7,7 +7,7 @@ import torch.nn as nn
 from sklearn.model_selection import train_test_split
 
 from sktime.classification.kernel_based import Arsenal, RocketClassifier
-from sktime.classification.dictionary_based import IndividualBOSS, ContractableBOSS
+from sktime.classification.dictionary_based import IndividualBOSS, ContractableBOSS, BOSSEnsemble
 from sktime.classification.interval_based import TimeSeriesForestClassifier, RandomIntervalSpectralEnsemble, DrCIF
 from sktime.classification.distance_based import KNeighborsTimeSeriesClassifier
 
