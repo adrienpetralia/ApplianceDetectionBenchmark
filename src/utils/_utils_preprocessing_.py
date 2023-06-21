@@ -86,8 +86,7 @@ def split_train_valid_test_pdl(df_data, test_size=0.2, valid_size=0, nb_label_co
         return X_train, y_train, X_valid, y_valid, X_test, y_test
     else:
         return X_train, y_train, X_test, y_test
-            
-            
+
 class NILMData(object):
     def __init__(self, 
                  data_path,
@@ -121,7 +120,7 @@ class NILMData(object):
         self._check_house_ids()
         self._check_appliance_names()
         
-    def BuildSaveNILMDataset(self, mask_index='Time'):
+    def BuildSaveNILMDataset(self, perc=1, mask_index='Time'):
         """
         -> Call GetNILMDataset for train (and test indicies if provided).
         -> Save train and test if save_path is provided
@@ -131,12 +130,13 @@ class NILMData(object):
                  - tuple : train : 4D numpy.ndarray
                            test : 4D numpy.ndarray
         """
-        train = self.GetNILMDataset(self.house_train_indicies, mask_index=mask_index)
+
+        train = self.GetNILMDataset(self.house_train_indicies, perc=perc, mask_index=mask_index)
         if self.save_path is not None:
             torch.save(torch.Tensor(train), self.save_path+'TrainData.pt')
             
         if self.house_test_indicies is not None:
-            test = self.GetNILMDataset(self.house_test_indicies, mask_index=mask_index)
+            test = self.GetNILMDataset(self.house_test_indicies, perc=perc, mask_index=mask_index)
             if self.save_path is not None:
                 torch.save(torch.Tensor(test), self.save_path+'TestData.pt')
             
@@ -144,7 +144,7 @@ class NILMData(object):
         else:
             return train
             
-    def GetNILMDataset(self, house_indicies, mask_index='Time'):
+    def GetNILMDataset(self, house_indicies, perc=1, mask_index='Time'):
         """
         Process data to build NILM usecase
         
@@ -183,9 +183,14 @@ class NILMData(object):
                         X[cpt, j, 0, :] = tmp[j, :]
                         X[cpt, j, 1, :] = (tmp[j, :] > 0).astype(dtype=int)
                     cpt += 1
-
-            output_data = np.concatenate((output_data, X[:cpt, :, :, :]), axis=0) if output_data.size else X[:cpt, :, :, :]
-                        
+            
+            if perc!=1:
+                ts_house = X[:cpt, :, :, :]
+                np.random.shuffle(ts_house)
+                output_data = np.concatenate((output_data, ts_house[:int(cpt*perc), :, :, :]), axis=0) if output_data.size else  ts_house[:int(cpt*perc), :, :, :]
+            
+            else:
+                output_data = np.concatenate((output_data, X[:cpt, :, :, :]), axis=0) if output_data.size else X[:cpt, :, :, :]
         return output_data
     
     def _get_stems(self, dataframe):
@@ -217,7 +222,7 @@ class NILMData(object):
         Fast check of NaN in a numpy array.
         """
         return np.isnan(np.dot(a, a))
-    
+        
     
 class REFITData(NILMData):
     def __init__(self, 
