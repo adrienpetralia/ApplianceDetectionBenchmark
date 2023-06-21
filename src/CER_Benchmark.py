@@ -7,18 +7,18 @@ import torch.nn as nn
 from sklearn.model_selection import train_test_split
 
 from sktime.classification.kernel_based import Arsenal, RocketClassifier
-from sktime.classification.dictionary_based import IndividualBOSS, ContractableBOSS
+from sktime.classification.dictionary_based import IndividualBOSS, BOSSEnsemble, ContractableBOSS
 from sktime.classification.interval_based import TimeSeriesForestClassifier, RandomIntervalSpectralEnsemble, DrCIF
 from sktime.classification.distance_based import KNeighborsTimeSeriesClassifier
 
 sys.path.append(os.getcwd())
-from Utils._utils_ import *
-from Utils._utils_preprocessing_ import *
+from utils._utils_ import *
+from utils._utils_preprocessing_ import *
 
-from Utils.Models.ResNet import ResNet
-from Utils.Models.InceptionTime import Inception, InceptionTime
-from Utils.Models.ConvNet import ConvNet
-from Utils.Models.ResNetAtt import ResNetAtt
+from utils.Models.ResNet import ResNet
+from utils.Models.InceptionTime import Inception, InceptionTime
+from utils.Models.ConvNet import ConvNet
+from utils.Models.ResNetAtt import ResNetAtt
 
 
 def launch_sktime_training(model, X_train, y_train, X_test, y_test, path_res):
