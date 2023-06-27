@@ -42,8 +42,6 @@ Nevertheless, our study shows that more work is needed in this area to further i
 }
 ```
 
-Access to the Preprint version of this article [here](https://www.researchgate.net/publication/370654257_Appliance_Detection_Using_Very_Low-Frequency_Smart_Meter_Time_Series).
-
 ## Contributors
 
 - Adrien Petralia (EDF R&D - Université Paris Cité)
