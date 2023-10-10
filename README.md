@@ -58,7 +58,7 @@ Overall, the required python packages are listed as follows:
     <li><a href="https://pandas.pydata.org/">pandas</a></li>
     <li><a href="https://scikit-learn.org/stable/">scikit-learn</a></li>
     <li><a href="https://imbalanced-learn.org/stable/">imbalanced-learn</a></li>
-    <li><a href="https://pytorch.org/docs/1.8.1/">torch==1.8.1</a></li>
+    <li><a href="https://pytorch.org/docs/1.13.1/">torch==1.13.1</a></li>
     <li><a href="https://pypi.org/project/torchinfo/0.0.1/">torchinfo</a></li>
     <li><a href="https://scipy.org/">scipy</a></li>
     <li><a href="http://www.sktime.net/en/latest/">sktime</a></li>
