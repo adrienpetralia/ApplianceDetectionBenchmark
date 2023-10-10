@@ -3,7 +3,7 @@ numba
 pandas
 scikit-learn
 imbalanced-learn
-torch==1.8.1
+torch==1.13.1
 torchinfo
 scipy
 sktime
