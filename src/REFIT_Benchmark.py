@@ -84,7 +84,7 @@ def REFIT_case(chosen_clf, classifiers, list_dict_case, list_param, path_res, pe
 
                 # First, to be sure to have at least one house with appliance in train and test
                 ind_house_train = list(np.random.choice(house_with_app, size=1, replace=False))
-                ind_house_test  = list(np.random.choice(house_without_app, size=1, replace=False))
+                ind_house_test  = list(np.random.choice(house_with_app, size=1, replace=False))
                 
                 # Rest of indices for train and test
                 rest_indices = np.array(list(house_with_app) + list(house_without_app))
