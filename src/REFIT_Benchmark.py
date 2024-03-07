@@ -7,18 +7,18 @@ import torch.nn as nn
 from sklearn.model_selection import train_test_split
 
 from sktime.classification.kernel_based import Arsenal, RocketClassifier
-from sktime.classification.dictionary_based import IndividualBOSS, ContractableBOSS
+from sktime.classification.dictionary_based import IndividualBOSS, ContractableBOSS, BOSSEnsemble
 from sktime.classification.interval_based import TimeSeriesForestClassifier, RandomIntervalSpectralEnsemble, DrCIF
 from sktime.classification.distance_based import KNeighborsTimeSeriesClassifier
 
 sys.path.append(os.getcwd())
-from Utils._utils_ import *
-from Utils._utils_preprocessing_ import *
+from utils._utils_ import *
+from utils._utils_preprocessing_ import *
 
-from Utils.Models.ResNet import ResNet
-from Utils.Models.InceptionTime import Inception, InceptionTime
-from Utils.Models.ConvNet import ConvNet
-from Utils.Models.ResNetAtt import ResNetAtt
+from utils.Models.ResNet import ResNet
+from utils.Models.InceptionTime import Inception, InceptionTime
+from utils.Models.ConvNet import ConvNet
+from utils.Models.ResNetAtt import ResNetAtt
 
     
 def launch_sktime_training(model, X_train, y_train, X_test, y_test, path_res):
@@ -49,13 +49,13 @@ def launch_deep_training(model, X_train, y_train, X_valid, y_valid, X_test, y_te
     train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=model['batch_size'], shuffle=True)
     valid_loader = torch.utils.data.DataLoader(valid_dataset, batch_size=1, shuffle=True)
 
-    model_trainer = classif_trainer(model_instance(),
-                                    train_loader=train_loader, valid_loader=valid_loader,
-                                    learning_rate=model['lr'], weight_decay=model['wd'],
-                                    patience_es=20, patience_rlr=5,
-                                    device="cuda", all_gpu=True,
-                                    verbose=False, plotloss=False, 
-                                    save_checkpoint=True, path_checkpoint=path_res)
+    model_trainer = classif_trainer_deep(model_instance(),
+                                         train_loader=train_loader, valid_loader=valid_loader,
+                                         learning_rate=model['lr'], weight_decay=model['wd'],
+                                         patience_es=20, patience_rlr=5,
+                                         device="cuda", all_gpu=True,
+                                         verbose=False, plotloss=False, 
+                                         save_checkpoint=True, path_checkpoint=path_res)
 
     model_trainer.train(n_epochs=max_epochs)
     model_trainer.restore_best_weights()
@@ -83,8 +83,13 @@ def REFIT_case(chosen_clf, classifiers, list_dict_case, list_param, path_res, pe
                 house_without_app = np.random.permutation(np.array(dict_case['house_without_app_i']))
 
                 # First, to be sure to have at least one house with appliance in train and test
+<<<<<<< HEAD
                 ind_house_train, house_with_app = list(house_with_app[:1]), house_with_app[1:]
                 ind_house_test,  house_with_app = list(house_with_app[:1]), house_with_app[1:]
+=======
+                ind_house_train = list(np.random.choice(house_with_app, size=1, replace=False))
+                ind_house_test  = list(np.random.choice(house_with_app, size=1, replace=False))
+>>>>>>> dd81df6aded289a7cd9dc043d4220cc4d8001285
                 
                 # Rest of indices for train and test
                 rest_indices = np.random.permutation(np.array(list(house_with_app) + list(house_without_app)))
@@ -218,7 +223,7 @@ if __name__ == "__main__":
     # ====== Number of houses use with all the data available ====== #
     nb_houses = [4, 8, 12, 'all']
     for nb_h in nb_houses:
-        path_res_n_houses = create_dir(path_res + str(h) + '_houses' + os.sep)
+        path_res_n_houses = create_dir(path_res + str(nb_h) + '_houses' + os.sep)
         REFIT_case(str(sys.argv[1]), classifiers, [list_case[int(sys.argv[2])]], list_param, path_res_n_houses, nb_houses_used=nb_h)
         
      # ====== Percentage of data used by houses ====== #        

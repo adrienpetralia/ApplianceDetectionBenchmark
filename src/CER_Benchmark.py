@@ -3,22 +3,23 @@ import numpy as np
 import pandas as pd
 import torch
 import torch.nn as nn
+from pathlib import Path
 
 from sklearn.model_selection import train_test_split
 
 from sktime.classification.kernel_based import Arsenal, RocketClassifier
-from sktime.classification.dictionary_based import IndividualBOSS, ContractableBOSS
+from sktime.classification.dictionary_based import IndividualBOSS, BOSSEnsemble, ContractableBOSS
 from sktime.classification.interval_based import TimeSeriesForestClassifier, RandomIntervalSpectralEnsemble, DrCIF
 from sktime.classification.distance_based import KNeighborsTimeSeriesClassifier
 
 sys.path.append(os.getcwd())
-from Utils._utils_ import *
-from Utils._utils_preprocessing_ import *
+from utils._utils_ import *
+from utils._utils_preprocessing_ import *
 
-from Utils.Models.ResNet import ResNet
-from Utils.Models.InceptionTime import Inception, InceptionTime
-from Utils.Models.ConvNet import ConvNet
-from Utils.Models.ResNetAtt import ResNetAtt
+from utils.Models.ResNet import ResNet
+from utils.Models.InceptionTime import Inception, InceptionTime
+from utils.Models.ConvNet import ConvNet
+from utils.Models.ResNetAtt import ResNetAtt
 
 
 def launch_sktime_training(model, X_train, y_train, X_test, y_test, path_res):
@@ -49,7 +50,7 @@ def launch_deep_training(model, X_train, y_train, X_valid, y_valid, X_test, y_te
     train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=model['batch_size'], shuffle=True)
     valid_loader = torch.utils.data.DataLoader(valid_dataset, batch_size=1, shuffle=True)
 
-    model_trainer = classif_trainer(model_instance(),
+    model_trainer = classif_trainer_deep(model_instance(),
                                     train_loader=train_loader, valid_loader=valid_loader,
                                     learning_rate=model['lr'], weight_decay=model['wd'],
                                     patience_es=20, patience_rlr=5,
@@ -89,7 +90,7 @@ def launch_one_case(chosen_clf, classifiers, list_case, path_data, path_res):
                     if not check_file_exist(path_inception+'Inception'+str(i)+'.pt'):
                         launch_deep_training(model, X_train, y_train, X_valid, y_valid, X_test, y_test, path_inception+'Inception'+str(i))
 
-                launch_classif(InceptionTime(Inception(), path_inception, 5), X_train, y_train, X_test, y_test, path_to_save)
+                launch_sktime_training(InceptionTime(Inception(), path_inception, 5), X_train, y_train, X_test, y_test, path_to_save)
             
             # ==================== Deep Learning Classifier =================== #
             elif chosen_clf=="ResNet" or chosen_clf=="ConvNet" or chosen_clf=="ResNetAtt":
@@ -97,14 +98,20 @@ def launch_one_case(chosen_clf, classifiers, list_case, path_data, path_res):
             
             # ==================== Sktime Classifier =================== #
             else:
-                launch_classif(model, X_train, y_train, X_test, y_test, path_to_save)
+                launch_sktime_training(model, X_train, y_train, X_test, y_test, path_to_save)
 
     return
   
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     
     path_data = os.getcwd()+'/data/CER_Electricity/'
+=======
+
+    root = Path(os.getcwd()).resolve().parents[0]
+    path_data = root + '/data/CER/'
+>>>>>>> dd81df6aded289a7cd9dc043d4220cc4d8001285
     path_res = None # Need to be fill
     
     chosen_classifier = str(sys.argv[1]) # Script argument
