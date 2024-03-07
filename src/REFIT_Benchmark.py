@@ -79,25 +79,25 @@ def REFIT_case(chosen_clf, classifiers, list_dict_case, list_param, path_res, pe
             for seed in range(5):
                 np.random.seed(seed=seed)
                 
-                house_with_app = np.array(dict_case['house_with_app_i'])
-                house_without_app = np.array(dict_case['house_without_app_i'])
+                house_with_app    = np.random.permutation(np.array(dict_case['house_with_app_i']))
+                house_without_app = np.random.permutation(np.array(dict_case['house_without_app_i']))
 
                 # First, to be sure to have at least one house with appliance in train and test
-                ind_house_train = list(np.random.choice(house_with_app, size=1, replace=False))
-                ind_house_test  = list(np.random.choice(house_without_app, size=1, replace=False))
+                ind_house_train, house_with_app = list(house_with_app[:1]), house_with_app[1:]
+                ind_house_test,  house_with_app = list(house_with_app[:1]), house_with_app[1:]
                 
                 # Rest of indices for train and test
-                rest_indices = np.array(list(house_with_app) + list(house_without_app))
+                rest_indices = np.random.permutation(np.array(list(house_with_app) + list(house_without_app)))
                 
                 # Get second house indice of for test dataset
-                ind_house_test  = ind_house_test + list(np.random.choice(rest_indices, size=1, replace=False))
+                ind_house_test, rest_indices  = ind_house_test + list(rest_indices[:1]), rest_indices[1:]
                 
                 if nb_houses_used=='all':
                     # Get rest of houses indices for train if all the houses used
                     ind_house_train = ind_house_train + list(rest_indices)
                 else:
                     # Get corresponding number of houses indices for train if n houses used
-                    ind_house_train = ind_house_train + list(np.random.choice(rest_indices, size=nb_houses_used, replace=False))
+                    ind_house_train = ind_house_train + list(rest_indices[:nb_houses_used-1])
                 
                 databuilder = REFITData(appliance_names=[case],
                                         sampling_rate=param['sampling_rate'],
@@ -124,7 +124,7 @@ def REFIT_case(chosen_clf, classifiers, list_dict_case, list_param, path_res, pe
                         if not check_file_exist(path_inception+'Inception'+str(i)+'.pt'):
                             launch_deep_training(model, X_train, y_train, X_valid, y_valid, X_test, y_test, path_inception+'Inception'+str(i))
 
-                    launch_classif(InceptionTime(Inception(), path_inception, 5), X_train, y_train, X_test, y_test, path_to_save)
+                    launch_deep_training(InceptionTime(Inception(), path_inception, 5), X_train, y_train, X_test, y_test, path_to_save)
                     
                 # ==================== Deep Learning Classifier =================== #
                 elif chosen_clf=="ResNet" or chosen_clf=="ConvNet" or chosen_clf=="ResNetAtt":
@@ -132,7 +132,7 @@ def REFIT_case(chosen_clf, classifiers, list_dict_case, list_param, path_res, pe
                     
                 # ==================== Sktime Classifier =================== #
                 else:
-                    launch_classif(model, X_train, y_train, X_test, y_test, path_to_save)
+                    launch_sktime_training(model, X_train, y_train, X_test, y_test, path_to_save)
 
     return
   
