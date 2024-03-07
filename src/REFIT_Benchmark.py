@@ -83,13 +83,8 @@ def REFIT_case(chosen_clf, classifiers, list_dict_case, list_param, path_res, pe
                 house_without_app = np.random.permutation(np.array(dict_case['house_without_app_i']))
 
                 # First, to be sure to have at least one house with appliance in train and test
-<<<<<<< HEAD
                 ind_house_train, house_with_app = list(house_with_app[:1]), house_with_app[1:]
                 ind_house_test,  house_with_app = list(house_with_app[:1]), house_with_app[1:]
-=======
-                ind_house_train = list(np.random.choice(house_with_app, size=1, replace=False))
-                ind_house_test  = list(np.random.choice(house_with_app, size=1, replace=False))
->>>>>>> dd81df6aded289a7cd9dc043d4220cc4d8001285
                 
                 # Rest of indices for train and test
                 rest_indices = np.random.permutation(np.array(list(house_with_app) + list(house_without_app)))

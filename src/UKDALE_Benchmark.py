@@ -49,13 +49,13 @@ def launch_deep_training(model, X_train, y_train, X_valid, y_valid, X_test, y_te
     train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=model['batch_size'], shuffle=True)
     valid_loader = torch.utils.data.DataLoader(valid_dataset, batch_size=1, shuffle=True)
 
-    model_trainer = classif_trainer(model_instance(),
-                                    train_loader=train_loader, valid_loader=valid_loader,
-                                    learning_rate=model['lr'], weight_decay=model['wd'],
-                                    patience_es=20, patience_rlr=5,
-                                    device="cuda", all_gpu=True,
-                                    verbose=False, plotloss=False, 
-                                    save_checkpoint=True, path_checkpoint=path_res)
+    model_trainer = classif_trainer_deep(model_instance(),
+                                        train_loader=train_loader, valid_loader=valid_loader,
+                                        learning_rate=model['lr'], weight_decay=model['wd'],
+                                        patience_es=20, patience_rlr=5,
+                                        device="cuda", all_gpu=True,
+                                        verbose=False, plotloss=False, 
+                                        save_checkpoint=True, path_checkpoint=path_res)
 
     model_trainer.train(n_epochs=max_epochs)
     model_trainer.restore_best_weights()
@@ -167,5 +167,5 @@ if __name__ == "__main__":
                   {'sampling_rate': '10T', 'window_size': 144,  'limit_ffill': 6},
                   {'sampling_rate': '1T',  'window_size': 1440, 'limit_ffill': 60}]
 
-    main(str(sys.argv[1]), classifiers, list_case, list_param, path_res)
+    UKDALE_case(str(sys.argv[1]), classifiers, list_case, list_param, path_res)
         

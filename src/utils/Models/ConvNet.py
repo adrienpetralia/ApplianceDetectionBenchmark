@@ -19,10 +19,6 @@ class Conv1dSame(torch.nn.Module):
 
     def forward(self, x):
         return self.net(x)
-<<<<<<< HEAD
-
-=======
->>>>>>> dd81df6aded289a7cd9dc043d4220cc4d8001285
 
 class ConvNet(nn.Module):
     def __init__(self, in_channels=1, nb_class=2):

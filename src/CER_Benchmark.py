@@ -104,14 +104,9 @@ def launch_one_case(chosen_clf, classifiers, list_case, path_data, path_res):
   
 
 if __name__ == "__main__":
-<<<<<<< HEAD
-    
-    path_data = os.getcwd()+'/data/CER_Electricity/'
-=======
 
     root = Path(os.getcwd()).resolve().parents[0]
     path_data = root + '/data/CER/'
->>>>>>> dd81df6aded289a7cd9dc043d4220cc4d8001285
     path_res = None # Need to be fill
     
     chosen_classifier = str(sys.argv[1]) # Script argument
