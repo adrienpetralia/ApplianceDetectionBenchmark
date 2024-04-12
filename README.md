@@ -224,3 +224,8 @@ In the following table, we summarize our benchmark evaluation for each appliance
 | Datasets | Arsenal | MiniRocket | Rocket | ConvNet | ResNet | ResNetAtt | InceptionTime | BOSS  | TSF   | RISE  | KNNeucli | Avg score |
 |----------|---------|------------|--------|---------|--------|-----------|---------------|-------|-------|-------|----------|-----------|
 | EDF 1    | 0.689   | 0.730      | 0.670  | 0.681   | 0.699  | 0.553     | 0.720         | 0.541 | 0.456 | 0.725 | 0.556    | 0.638     |
+
+
+## Acknowledgments
+
+Work supported by EDF R&D and ANRT French program.
