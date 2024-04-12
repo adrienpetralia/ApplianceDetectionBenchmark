@@ -44,8 +44,10 @@ Nevertheless, our study shows that more work is needed in this area to further i
 
 ## Contributors
 
-- Adrien Petralia (EDF R&D - Université Paris Cité)
-- Paul Boniol (Université Paris Cité - ENS Paris Saclay)
+* [Adrien Petralia](https://adrienpetralia.github.io/), EDF R&D, Université Paris Cité
+* [Paul Boniol](https://boniolp.github.io/), Inria, ENS, PSL University, CNRS
+* [Philippe Charpentier](https://www.researchgate.net/profile/Philippe-Charpentier), EDF R&D
+* [Themis Palpanas](https://helios2.mi.parisdescartes.fr/~themisp/), Université Paris Cité, IUF
 
 ## Prerequisites 
 
