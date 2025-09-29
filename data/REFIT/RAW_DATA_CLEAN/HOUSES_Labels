@@ -1,21 +1,21 @@
 House_id,Time,Unix,Aggregate,Appliance1,Appliance2,Appliance3,Appliance4,Appliance5,Appliance6,Appliance7,Appliance8,Appliance9,Issues
-1,Time,Unix,Aggregate,Fridge,Chest Freezer,Upright Freezer,Tumble Dryer,Washing Machine,Dishwasher,Computer Site,Television Site,Electric Heater,Issues
-2,Time,Unix,Aggregate,Fridge-Freezer,Washing Machine,Dishwasher,Television Site,Microwave,Toaster,Hi-Fi,Kettle,Oven Extractor Fan,Issues
-3,Time,Unix,Aggregate,Toaster,Fridge-Freezer,Freezer,Tumble Dryer,Dishwasher,Washing Machine,Television Site,Microwave,Kettle,Issues
-4,Time,Unix,Aggregate,Fridge,Freezer,Fridge-Freezer,Washing Machine (1),Washing Machine (2),Computer Site,Television Site,Microwave,Kettle,Issues
-5,Time,Unix,Aggregate,Fridge-Freezer,Tumble Dryer,Washing Machine,Dishwasher,Computer Site,Television Site,Combination Microwave,Kettle,Toaster,Issues
-6,Time,Unix,Aggregate,Freezer,Washing Machine,Dishwasher,MJY Computer,Television Site,Microwave,Kettle,Toaster,PGM Computer,Issues
-7,Time,Unix,Aggregate,Fridge,Freezer (garage),Freezer,Tumble Dryer,Washing Machine,Dishwasher,Television Site,Television,Kettle,Issues
-8,Time,Unix,Aggregate,Fridge,Freezer,Tumble Dryer,Washing Machine,Toaster,Computer,Television Site,Microwave,Kettle,Issues
-9,Time,Unix,Aggregate,Fridge-Freezer,Washer Dryer,Washing Machine,Dishwasher,Television Site,Microwave,Kettle,Hi-Fi,Electric Heater,Issues
-10,Time,Unix,Aggregate,Magimix (Blender),Freezer,Chest Freezer (In Garage),Fridge-Freezer,Washing Machine,Dishwasher,Television Site,Microwave,Kenwood KMix,Issues
-11,Time,Unix,Aggregate,Fridge,Fridge-Freezer,Washing Machine,Dishwasher,Computer Site,Microwave,Kettle,Router,Hi-Fi,Issues
-12,Time,Unix,Aggregate,Fridge-Freezer,Television Site(Lounge),Microwave,Kettle,Toaster,Television Site(Bedroom),Not Used,Not Used,Not Used,Issues
-13,Time,Unix,Aggregate,Television Site,Unknown,Washing Machine,Dishwasher,Tumble Dryer,Television Site,Computer Site,Microwave,Kettle,Issues
-15,Time,Unix,Aggregate,Fridge-Freezer,Tumble Dryer,Washing Machine,Dishwasher,Computer Site,Television Site,Microwave,Kettle,Toaster,Issues
-16,Time,Unix,Aggregate,Fridge-Freezer (1),Fridge-Freezer (2),Electric Heater (1),Electric Heater (2),Washing Machine,Dishwasher,Computer Site,Television Site,Dehumidifier/Heater,Issues
-17,Time,Unix,Aggregate,Freezer (Garage),Fridge-Freezer,Tumble Dryer (Garage),Washing Machine,Computer Site,Television Site,Microwave,Kettle,Plug Site (Bedroom),Issues
-18,Time,Unix,Aggregate,Fridge(garage),Freezer(garage),Fridge-Freezer,Washer Dryer(garage),Washing Machine,Dishwasher,Desktop Computer,Television Site,Microwave,Issues
-19,Time,Unix,Aggregate,Fridge & Freezer,Washing Machine,Television Site,Microwave,Kettle,Toaster,Bread-maker,Lamp (80Watts),Hi-Fi,Issues
-20,Time,Unix,Aggregate,Fridge,Freezer,Tumble Dryer,Washing Machine,Dishwasher,Computer Site,Television Site,Microwave,Kettle,Issues
-21,Time,Unix,Aggregate,Fridge-Freezer,Tumble Dryer,Washing Machine,Dishwasher,Food Mixer,Television Site,Kettle/Toaster,Vivarium,Pond Pump,Issues
+1,Time,Unix,Aggregate,Fridge,Chest Freezer,Upright Freezer,TumbleDryer,WashingMachine,Dishwasher,ComputerSite,TelevisionSite,ElectricHeater,Issues
+2,Time,Unix,Aggregate,Fridge-Freezer,WashingMachine,Dishwasher,TelevisionSite,Microwave,Toaster,Hi-Fi,Kettle,Oven Extractor Fan,Issues
+3,Time,Unix,Aggregate,Toaster,Fridge-Freezer,Freezer,TumbleDryer,Dishwasher,WashingMachine,TelevisionSite,Microwave,Kettle,Issues
+4,Time,Unix,Aggregate,Fridge,Freezer,Fridge-Freezer,WashingMachine (1),WashingMachine (2),ComputerSite,TelevisionSite,Microwave,Kettle,Issues
+5,Time,Unix,Aggregate,Fridge-Freezer,TumbleDryer,WashingMachine,Dishwasher,ComputerSite,TelevisionSite,Combination Microwave,Kettle,Toaster,Issues
+6,Time,Unix,Aggregate,Freezer,WashingMachine,Dishwasher,MJY Computer,TelevisionSite,Microwave,Kettle,Toaster,PGM Computer,Issues
+7,Time,Unix,Aggregate,Fridge,Freezer (garage),Freezer,TumbleDryer,WashingMachine,Dishwasher,TelevisionSite,Television,Kettle,Issues
+8,Time,Unix,Aggregate,Fridge,Freezer,TumbleDryer,WashingMachine,Toaster,Computer,TelevisionSite,Microwave,Kettle,Issues
+9,Time,Unix,Aggregate,Fridge-Freezer,Washer Dryer,WashingMachine,Dishwasher,TelevisionSite,Microwave,Kettle,Hi-Fi,ElectricHeater,Issues
+10,Time,Unix,Aggregate,Magimix (Blender),Freezer,Chest Freezer (In Garage),Fridge-Freezer,WashingMachine,Dishwasher,TelevisionSite,Microwave,Kenwood KMix,Issues
+11,Time,Unix,Aggregate,Fridge,Fridge-Freezer,WashingMachine,Dishwasher,ComputerSite,Microwave,Kettle,Router,Hi-Fi,Issues
+12,Time,Unix,Aggregate,Fridge-Freezer,TelevisionSite(Lounge),Microwave,Kettle,Toaster,TelevisionSite(Bedroom),Not Used,Not Used,Not Used,Issues
+13,Time,Unix,Aggregate,TelevisionSite,Unknown,WashingMachine,Dishwasher,TumbleDryer,TelevisionSite,ComputerSite,Microwave,Kettle,Issues
+15,Time,Unix,Aggregate,Fridge-Freezer,TumbleDryer,WashingMachine,Dishwasher,ComputerSite,TelevisionSite,Microwave,Kettle,Toaster,Issues
+16,Time,Unix,Aggregate,Fridge-Freezer (1),Fridge-Freezer (2),ElectricHeater (1),ElectricHeater (2),WashingMachine,Dishwasher,ComputerSite,TelevisionSite,Dehumidifier/Heater,Issues
+17,Time,Unix,Aggregate,Freezer (Garage),Fridge-Freezer,TumbleDryer (Garage),WashingMachine,ComputerSite,TelevisionSite,Microwave,Kettle,Plug Site (Bedroom),Issues
+18,Time,Unix,Aggregate,Fridge(garage),Freezer(garage),Fridge-Freezer,Washer Dryer(garage),WashingMachine,Dishwasher,Desktop Computer,TelevisionSite,Microwave,Issues
+19,Time,Unix,Aggregate,Fridge & Freezer,WashingMachine,TelevisionSite,Microwave,Kettle,Toaster,Bread-maker,Lamp (80Watts),Hi-Fi,Issues
+20,Time,Unix,Aggregate,Fridge,Freezer,TumbleDryer,WashingMachine,Dishwasher,ComputerSite,TelevisionSite,Microwave,Kettle,Issues
+21,Time,Unix,Aggregate,Fridge-Freezer,TumbleDryer,WashingMachine,Dishwasher,Food Mixer,TelevisionSite,Kettle/Toaster,Vivarium,Pond Pump,Issues
